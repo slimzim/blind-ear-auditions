@@ -3,21 +3,31 @@ var db = require("../models");
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
       res.render("index", {
         msg: "Welcome!",
-        examples: dbExamples,
       });
     });
-  });
+
+  // Load judges page
+  app.get("/judge", function(req, res){
+    res.render("judge")
+  })
+
+  // Load comments result page
+  app.get("/comments-form", function(req, res){
+    db.Score.findAll({}).then(function(dbScore){
+      res.render("comments-form")
+    })
+  })
 
   // Load example page and pass in an example by id
-  app.get("/proctor-login/", function(req, res) {
-    res.render("proctor-login");
-  });
-
-  app.get("/proctor-login/proctor/", function(req, res) {
-    res.render("proctor");
+  app.get("/comments/:id", function(req, res) {
+    db.Score.findAll({ where: { candidate_number: req.params.id } }).then(function(dbComments) {
+      res.render("comments-card", {
+        comments: dbComments,
+        empty: req.params.id
+      });
+    });
   });
 
   // Render 404 page for any unmatched routes

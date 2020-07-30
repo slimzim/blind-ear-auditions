@@ -1,24 +1,19 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  // Get all examples
-  app.get("/api/examples", function(req, res) {
-    db.Example.findAll({}).then(function(dbExamples) {
-      res.json(dbExamples);
+  // Get comments by candidate number
+  app.get("/api/comments/:candidate_number", function(req, res) {
+    db.Score.findAll({ where: { candidate_number: req.params.candidate_number }}).then(function(comments) {
+      res.json(comments);
+      console.log(comments)
     });
   });
 
   // Create a new example
-  app.post("/api/examples", function(req, res) {
-    db.Example.create(req.body).then(function(dbExample) {
-      res.json(dbExample);
+  app.post("/api/judge", function(req, res) {
+    db.Score.create(req.body).then(function(dbScore) {
+      res.json(dbScore);
+      console.log(dbScore)
     });
   });
-
-  // Delete an example by id
-  app.delete("/api/examples/:id", function(req, res) {
-    db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.json(dbExample);
-    });
-  });
-};
+}
