@@ -2,14 +2,14 @@
   "development": {
     "username": "root",
     "password": "password",
-    "database": "exampledb",
+    "database": "audition_db",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
     "password": "password",
-    "database": "testdb",
+    "database": "audition_db",
     "host": "localhost",
     "dialect": "mysql",
     "logging": false
