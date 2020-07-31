@@ -1,0 +1,122 @@
+{{#each comments}}
+
+<div class="container">
+  <div class="row">
+    <div class="col-8 offset-2">
+      <div class="card mt-4">
+        <div class="card-body">
+          <p><strong>Judge Number</strong>: {{this.judge_number}}</p>
+          <p><strong>Comments</strong>: {{this.comments}}</p>
+          <a href="/">← Back To Home</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{{else}}
+<h1>No comments for {{empty}}</h1>
+
+{{/each}}
+
+
+
+<script type="text/javascript">
+
+        var comments = {{{toJSON comments}}}
+        console.log(comments)
+
+         var tableArray = [
+          ['Category', 'Intonation', 'Rhythm', 'Tone', 'Musicality', 'Average'],
+          ]
+
+        var intonationTotal = 0
+        var rhythmTotal = 0
+        var toneTotal = 0
+        var musicalityTotal = 0
+
+
+
+    for (var i=0; i<comments.length; i++){
+        tempArray = []
+        intonation = comments[i].intonation
+        rhythm = comments[i].intonation
+        tone = comments[i].tone
+        musicality = comments[i].musicality
+
+        tempArray.push("Judge " + comments[i].judge_number)
+        tempArray.push(intonation)
+        intonationTotal += intonation
+        tempArray.push(rhythm)
+        rhythmTotal += rhythm
+        tempArray.push(tone)
+        toneTotal += tone
+        tempArray.push(musicality)
+        musicalityTotal += musicality
+        averageScore = (intonation + rhythm + tone + musicality)/comments.length
+       
+        
+        tempArray.push(averageScore)
+        tableArray.push(tempArray)
+    }
+
+        intonationAverage = intonationTotal/comments.length
+        rhythmAverage = rhythmTotal/comments.length
+        toneAverage = toneTotal/comments.length
+        musicalityAverage = musicalityTotal/comments.length
+        
+
+
+
+
+
+
+
+
+       
+         
+
+
+var tableArrayExample = [
+          ['Month', 'Bolivia', 'Ecuador', 'Madagascar', 'Papua New Guinea', 'Average'],
+          ['2004/05',  165,      938,         522,          998,           614.6],
+          ['2005/06',  135,      1120,        599,          1268,          682],
+          ['2006/07',  157,      1167,        587,          807,           623],
+          ['2007/08',  139,      1110,        615,          968,           609.4],
+          ['2008/09',  136,      691,         629,          1026,          569.6]
+        ] 
+
+
+
+console.log(tableArray[1][1])
+
+</script>
+
+
+
+
+
+
+   
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawVisualization);
+
+      function drawVisualization() {
+        // Some raw data (not necessarily accurate)
+        var data = google.visualization.arrayToDataTable(tableArray);
+
+        var options = {
+          title : 'Average Scores',
+          vAxis: {title: 'Scores'},
+          hAxis: {title: 'Judge'},
+          seriesType: 'bars',
+          series: {4: {type: 'line'}}        };
+
+        var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+        chart.draw(data, options);
+      }
+    </script>
+
+    <div id="chart_div" style="width: 900px; height: 500px;"></div>
