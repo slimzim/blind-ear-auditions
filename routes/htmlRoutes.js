@@ -13,6 +13,13 @@ module.exports = function(app) {
     res.render("judge")
   })
 
+//  // Load comments page - BootStrapMade
+//  app.get("/comments", function(req, res){
+//   res.render("comments")
+// })
+
+
+
   // Load comments result page
   app.get("/comments-form", function(req, res){
     db.Score.findAll({}).then(function(dbScore){
@@ -20,10 +27,20 @@ module.exports = function(app) {
     })
   })
 
-  // Load example page and pass in an example by id
+  // Load comments card page using candidate number
   app.get("/comments/:id", function(req, res) {
     db.Score.findAll({ where: { candidate_number: req.params.id } }).then(function(dbComments) {
-      res.render("comments-card", {
+      res.render("comments", {
+        comments: dbComments,
+        empty: req.params.id
+      });
+    });
+  });
+
+  // Load example page using graphs instead of cards
+  app.get("/comments-graph/:id", function(req, res) {
+    db.Score.findAll({ where: { candidate_number: req.params.id } }).then(function(dbComments) {
+      res.render("comments-graph", {
         comments: dbComments,
         empty: req.params.id
       });

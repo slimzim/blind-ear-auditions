@@ -16,7 +16,12 @@ app.use(express.static("public"));
 app.engine(
   "handlebars",
   exphbs({
-    defaultLayout: "main"
+    defaultLayout: "main", 
+    helpers: {
+      toJSON: function(object){
+        return JSON.stringify(object);
+      }
+    }
   })
 );
 app.set("view engine", "handlebars");
