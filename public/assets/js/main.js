@@ -1,9 +1,3 @@
-/**
-* Template Name: Imperial - v3.0.0
-* Template URL: https://bootstrapmade.com/imperial-free-onepage-bootstrap-theme/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
 !(function($) {
   "use strict";
 
@@ -153,6 +147,15 @@
     }, 1500, 'easeInOutExpo');
     return false;
   });
+
+  // Score Sliders
+  var slider = document.getElementById("myRange");
+  var output = document.getElementById("demo");
+  output.innerHTML = slider.value;
+  
+  slider.oninput = function() {
+    output.innerHTML = this.value;
+  }
 
   // Porfolio isotope and filter
   $(window).on('load', function() {

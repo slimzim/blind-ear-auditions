@@ -1,10 +1,3 @@
-/**
-* Template Name: Imperial - v3.0.0
-* Template URL: https://bootstrapmade.com/imperial-free-onepage-bootstrap-theme/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
@@ -38,7 +31,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #949494;
 }
 
-/* Prelaoder */
+/* Preloader */
 #preloader {
   position: fixed;
   left: 0;
@@ -47,7 +40,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   height: 100%;
   overflow: visible;
-  background: #fff url("../img/preloader.svg") no-repeat center center;
+  background: #fff url("/assets/img/preloader.svg") no-repeat center center;
 }
 
 /* Back to top button */
@@ -88,7 +81,7 @@ h1, h2, h3, h4, h5, h6 {
   display: table;
   width: 100%;
   height: 100vh;
-  background: url(../img/bw.jpg) top center;
+  background: url(/assets/img/bw.jpg) top center;
   background-size: cover;
 }
 
@@ -728,6 +721,14 @@ h1, h2, h3, h4, h5, h6 {
   opacity: 1;
 }
 
+/* Portfolio Section
+--------------------------------*/
+
+.judge-form-group {
+  color: #03C4EB;
+  margin-top: 75px;
+}
+
 /* Testimonials Section
 --------------------------------*/
 #testimonials {
@@ -1097,4 +1098,60 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   font-size: 13px;
   color: #ccc;
+}
+
+/*--------------------------------------------------------------
+# Music Section
+--------------------------------------------------------------*/
+#music-section{
+  margin-top: 50px;
+}
+
+#music-div {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+}
+
+/*--------------------------------------------------------------
+# Score Section Sliders
+--------------------------------------------------------------*/
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 23px;
+  height: 24px;
+  border: 0;
+  background: url("/public/assets/img/contrasticon.png");
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 23px;
+  height: 24px;
+  border: 0;
+  background: url("/public/assets/img/contrasticon.png");
+  cursor: pointer;
 }
