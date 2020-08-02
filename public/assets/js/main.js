@@ -148,15 +148,6 @@
     return false;
   });
 
-  // Score Sliders
-  var slider = document.getElementById("myRange");
-  var output = document.getElementById("demo");
-  output.innerHTML = slider.value;
-  
-  slider.oninput = function() {
-    output.innerHTML = this.value;
-  }
-
   // Porfolio isotope and filter
   $(window).on('load', function() {
     var portfolioIsotope = $('.portfolio-container').isotope({

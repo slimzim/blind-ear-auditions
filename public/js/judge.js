@@ -6,6 +6,7 @@ var $intonation = $("#intonation")
 var $rhythm = $("#rhythm")
 var $tone = $("#tone")
 var $musicality = $("#musicality")
+var slider1 = document.getElementById("rhythm");
 var $submitBtn = $("#submit");
 
 // The API object contains methods for each kind of request we'll make
@@ -48,3 +49,41 @@ var handleFormSubmit = function(event) {
 
 // Add event listeners to the submit and delete buttons
 $submitBtn.on("click", handleFormSubmit)
+
+ // Intonation Slider
+ var intonationSlider = document.getElementById("intonation");
+ var intonationoutput = document.getElementById("intonation-slider");
+ intonationoutput.innerHTML = intonationSlider.value;
+ 
+ intonationSlider.oninput = function() {
+   intonationoutput.innerHTML = this.value;
+ }
+
+  // Rhythm Slider
+  var rhythmSlider = document.getElementById("rhythm");
+  var rhythmoutput = document.getElementById("rhythm-slider");
+  rhythmoutput.innerHTML = rhythmSlider.value;
+  
+  rhythmSlider.oninput = function() {
+    rhythmoutput.innerHTML = this.value;
+  }
+
+ // Tone Slider
+ var toneSlider = document.getElementById("tone");
+ var toneoutput = document.getElementById("tone-slider");
+ toneoutput.innerHTML = toneSlider.value;
+ 
+ toneSlider.oninput = function() {
+  toneoutput.innerHTML = this.value;
+ }
+
+  // Musicality Slider
+  var musicalitySlider = document.getElementById("musicality");
+  var musicalityoutput = document.getElementById("musicality-slider");
+  musicalityoutput.innerHTML = musicalitySlider.value;
+  
+  musicalitySlider.oninput = function() {
+    musicalityoutput.innerHTML = this.value;
+  }
+
+
