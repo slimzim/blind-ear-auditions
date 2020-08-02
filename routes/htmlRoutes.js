@@ -13,12 +13,15 @@ module.exports = function(app) {
     res.render("judge")
   })
 
-//  // Load comments page - BootStrapMade
-//  app.get("/comments", function(req, res){
-//   res.render("comments")
-// })
+ // Load candidate registration page
+ app.get("/candidateregister", function(req, res){
+  res.render("candidateregister")
+})
 
-
+ // Load judges registration page
+ app.get("/judgeregister", function(req, res){
+  res.render("judgeregister")
+})
 
   // Load comments result page
   app.get("/comments-form", function(req, res){
