@@ -18,7 +18,8 @@ function postNewJudge(newJudge) {
       url: "api/judgeregister",
       data: JSON.stringify(newJudge)
     });
-  }
+    
+}
 
 // handleFormSubmit is called whenever we submit a new example
 // Save the new example to the db and refresh the list
@@ -75,12 +76,9 @@ var handleFormSubmit = function() {
         return
     }
   
-    postNewJudge(newJudge)
+    postNewJudge(newJudge)    
 
-
-
-    
-
+    alert("Successfully registered " + newJudge.first_name + " " + newJudge.last_name + "!")
   };
 
   

@@ -77,7 +77,7 @@ var handleFormSubmit = function() {
   
     postNewCandidate(newCandidate)
 
-
+    alert("Successfully registered " + newCandidate.first_name + " " + newCandidate.last_name + "!")
 
     
 
