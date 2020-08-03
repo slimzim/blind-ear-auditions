@@ -10,7 +10,7 @@
     }
   });
 
-  // Hero typed
+  // Welcome 'typed' text
   if ($('.typed').length) {
     var typed_strings = $(".typed").data('typed-items');
     typed_strings = typed_strings.split(',')
@@ -23,14 +23,14 @@
     });
   }
 
-  // Stick the header at top on scroll
-  $("#header").sticky({
+  // Stick the navbar at top on scroll
+  $("#navigation").sticky({
     topSpacing: 0,
     zIndex: '50'
   });
 
   // Smooth scroll for the navigation menu and links with .scrollto classes
-  var scrolltoOffset = $('#header').outerHeight() - 1;
+  var scrolltoOffset = $('#navigation').outerHeight() - 1;
   $(document).on('click', '.nav-menu a, .mobile-nav a, .scrollto', function(e) {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
@@ -39,7 +39,7 @@
 
         var scrollto = target.offset().top - scrolltoOffset;
 
-        if ($(this).attr("href") == '#header') {
+        if ($(this).attr("href") == '#navigation') {
           scrollto = 0;
         }
 
