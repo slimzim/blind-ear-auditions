@@ -125,7 +125,8 @@ h1, h2, h3, h4, h5, h6 {
 
 #hero h2 {
   color: #ccc;
-  margin-bottom: 50px;
+  margin-top: 100px;
+  margin-bottom: 25px;
 }
 
 #hero h2 span {
@@ -140,6 +141,7 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 26px;
     margin-bottom: 30px;
   }
+
   #hero h2 .rotating {
     display: block;
   }
@@ -440,9 +442,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /*--------------------------------------------------------------
-# Sections
+# Sections (Common)
 --------------------------------------------------------------*/
-/* Sections Common
+/* Sections 
 --------------------------------*/
 .section-title {
   font-size: 50px;
@@ -466,10 +468,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Registration Form Section 
---------------------------------*/
+--------------------------------
 #about .form-horizontal {
   margin-top: 100px;
-}
+} */
 
 /* Get Started Section
 --------------------------------*/
@@ -481,6 +483,7 @@ h1, h2, h3, h4, h5, h6 {
 
 #about .about-img {
   overflow: hidden;
+
 }
 
 #about .about-img img {
@@ -497,7 +500,12 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-.about-section-description {
+.candidate-section-description {
+  text-align: center;
+  margin-bottom: 200px;
+}
+
+.about-description {
   text-align: center;
   margin-bottom: 75px;
 }
@@ -508,9 +516,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #about .about-title {
-  color: #333;
-  font-weight: 700;
-  font-size: 30px;
+  color: black;
+  font-weight: 500;
+  font-size: 50px;
+  text-align: center;
+}
+
+#about .about-scores {
+  color: #03C4EB;
+  font-weight: 500;
+  font-size: 45px;
+  text-align: center;
+  margin-top: 50px;
 }
 
 #about .about-text {
@@ -572,48 +589,14 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 24px;
 }
 
-/* Subscribe Section
+/* Divider Section
 --------------------------------*/
-#subscribe {
+#divider {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/aerial.jpg) fixed center center;
   background-size: cover;
   padding: 80px 0;
 }
 
-#subscribe .subscribe-title {
-  color: #fff;
-  font-size: 28px;
-  font-weight: 700;
-}
-
-#subscribe .subscribe-text {
-  color: #fff;
-}
-
-#subscribe .subscribe-btn-container {
-  text-align: center;
-  padding-top: 20px;
-}
-
-#subscribe .subscribe-btn {
-  font-family: "Raleway", sans-serif;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 1px;
-  display: inline-block;
-  padding: 8px 20px;
-  border-radius: 2px;
-  transition: 0.5s;
-  margin: 10px;
-  border: 2px solid #fff;
-  color: #fff;
-}
-
-#subscribe .subscribe-btn:hover {
-  background: #03C4EB;
-  border: 2px solid #03C4EB;
-}
 
 /* Portfolio Section
 --------------------------------*/
@@ -1091,13 +1074,15 @@ h1, h2, h3, h4, h5, h6 {
 
 #footer .copyright {
   text-align: center;
+  color: white;
+  font-size: 15px;
 }
 
 #footer .credits {
   padding-top: 10px;
   text-align: center;
-  font-size: 13px;
-  color: #ccc;
+  font-size: 25px;
+  color: white;
 }
 
 /*--------------------------------------------------------------
@@ -1281,6 +1266,19 @@ h1, h2, h3, h4, h5, h6 {
   background: white;
   border: 2px solid darkgrey;
 }
+
+.judgevote {
+  -ms-transform: scale(2); /* IE 9 */
+  -webkit-transform: scale(2); /* Chrome, Safari, Opera */
+  transform: scale(2);
+  margin-left: 50px !important;
+  margin-right: 30px !important;
+  }
+
+  .judgebutton {
+    font-size: 24px;
+  }
+
 
 /* Register Section
 --------------------------------*/

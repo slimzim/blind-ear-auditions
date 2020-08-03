@@ -1,0 +1,949 @@
+/*--------------------------------------------------------------
+# General (Common)
+--------------------------------------------------------------*/
+
+body {
+    background: #fff;
+    color: #666666;
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  a {
+    color: #03C4EB;
+    transition: 0.5s;
+  }
+  
+  a:hover, a:active, a:focus {
+    color: #03c5ec;
+    outline: none;
+    text-decoration: none;
+  }
+  
+  p {
+    padding: 0;
+    margin: 0 0 30px 0;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    margin: 0 0 20px 0;
+    padding: 0;
+    color: #949494;
+  }
+  
+  /* Preloader */
+  #preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    background: #fff url("/assets/img/preloader.svg") no-repeat center center;
+  }
+  
+  /* Back to top button */
+  .back-to-top {
+    position: fixed;
+    display: none;
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    padding: 6px 12px 9px 12px;
+    font-size: 16px;
+    border-radius: 2px;
+    right: 15px;
+    bottom: 15px;
+    transition: background 0.5s;
+  }
+  
+  @media (max-width: 768px) {
+    .back-to-top {
+      bottom: 15px;
+    }
+  }
+  
+  .back-to-top:focus {
+    background: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    outline: none;
+  }
+  
+  .back-to-top:hover {
+    background: #03C4EB;
+    color: #fff;
+  }
+
+/*--------------------------------------------------------------
+WELCOME MAIN (common)
+--------------------------------------------------------------*/
+#welcome {
+    display: table;
+    width: 100%;
+    height: 100vh;
+    background: url(/assets/img/bw.jpg) top center;
+    background-size: cover;
+  }
+  
+  @media (min-width: 1024px) {
+    #welcome {
+      background-attachment: fixed;
+    }
+  }
+  
+  #welcome .welcome-logo {
+    margin: 20 20 0 20;
+  }
+  
+  #welcome .welcome-logo img {
+    max-width: 65%;
+  }
+  
+  #welcome .welcome-container {
+    background: rgba(0, 0, 0, 0.8);
+    display: table-cell;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  #welcome h1 {
+    margin: 30px 0 10px 0;
+    font-weight: 700;
+    line-height: 48px;
+    text-transform: uppercase;
+    color: #fff;
+  }
+  
+  @media (max-width: 768px) {
+    #welcome h1 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+  }
+  
+  #welcome h2 {
+    color: #ccc;
+    margin-top: 100px;
+    margin-bottom: 25px;
+  }
+  
+  #welcome h2 span {
+    color: #fff;
+    transition: 0.3s;
+    border-bottom: 2px solid #03C4EB;
+  }
+  
+  @media (max-width: 768px) {
+    #welcome h2 {
+      font-size: 24px;
+      line-height: 26px;
+      margin-bottom: 30px;
+    }
+  
+    #welcome h2 .rotating {
+      display: block;
+    }
+  }
+  
+  #welcome .rotating > .animated {
+    display: inline-block;
+  }
+  
+/*--------------------------------------------------------------
+# INDEX WELCOME
+--------------------------------------------------------------*/
+  #welcome .actions a {
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 1px;
+    display: inline-block;
+    padding: 8px 20px;
+    border-radius: 2px;
+    transition: 0.5s;
+    margin: 10px;
+  }
+  
+  #welcome .btn-get-started {
+    background: #03C4EB;
+    border: 2px solid #03C4EB;
+    color: #fff;
+  }
+  
+  #welcome .btn-get-started:hover {
+    background: none;
+    border: 2px solid #fff;
+    color: #fff;
+  }
+  
+  #welcome .btn-services {
+    border: 2px solid #fff;
+    color: #fff;
+  }
+  
+  #welcome .btn-services:hover {
+    background: #03C4EB;
+    border: 2px solid #03C4EB;
+  }
+
+/*--------------------------------------------------------------
+# NavBar
+--------------------------------------------------------------*/
+#navigation {
+  background: #0d0d0d;
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 15px 0;
+}
+
+#navigation .logo {
+  font-size: 32px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#navigation .logo a {
+  color: #fff;
+}
+
+#navigation .logo img {
+  height: 50px;
+}
+
+@media (max-width: 992px) {
+  #navigation .logo {
+    font-size: 28px;
+  }
+}
+
+.is-sticky #navigation {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+/*--------------------------------------------------------------
+# Navigation Menu
+--------------------------------------------------------------*/
+/* Desktop Navigation */
+.nav-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav-menu > ul {
+  display: flex;
+}
+
+.nav-menu > ul > li {
+  position: relative;
+  white-space: nowrap;
+  padding: 10px 0 10px 28px;
+}
+
+.nav-menu a {
+  display: block;
+  position: relative;
+  color: #fff;
+  transition: 0.3s;
+  font-size: 14px;
+  font-family: "Raleway", sans-serif;
+}
+
+.nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+  color: #03C4EB;
+}
+
+.nav-menu .drop-down ul {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: calc(100% + 30px);
+  z-index: 99;
+  opacity: 0;
+  visibility: hidden;
+  padding: 10px 0;
+  background: #fff;
+  box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+  transition: 0.3s;
+}
+
+.nav-menu .drop-down:hover > ul {
+  opacity: 1;
+  top: 100%;
+  visibility: visible;
+}
+
+.nav-menu .drop-down li {
+  min-width: 180px;
+  position: relative;
+}
+
+.nav-menu .drop-down ul a {
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: none;
+  color: #333333;
+}
+
+.nav-menu .drop-down ul a:hover, .nav-menu .drop-down ul .active > a, .nav-menu .drop-down ul li:hover > a {
+  color: #03C4EB;
+}
+
+.nav-menu .drop-down > a:after {
+  content: "\ea99";
+  font-family: IcoFont;
+  padding-left: 5px;
+}
+
+.nav-menu .drop-down .drop-down ul {
+  top: 0;
+  left: calc(100% - 30px);
+}
+
+.nav-menu .drop-down .drop-down:hover > ul {
+  opacity: 1;
+  top: 0;
+  left: 100%;
+}
+
+.nav-menu .drop-down .drop-down > a {
+  padding-right: 35px;
+}
+
+.nav-menu .drop-down .drop-down > a:after {
+  content: "\eaa0";
+  font-family: IcoFont;
+  position: absolute;
+  right: 15px;
+}
+
+@media (max-width: 1366px) {
+  .nav-menu .drop-down .drop-down ul {
+    left: -90%;
+  }
+  .nav-menu .drop-down .drop-down:hover > ul {
+    left: -100%;
+  }
+  .nav-menu .drop-down .drop-down > a:after {
+    content: "\ea9d";
+  }
+}
+
+/* Mobile Navigation */
+.mobile-nav-toggle {
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  z-index: 9998;
+  border: 0;
+  background: none;
+  font-size: 24px;
+  transition: all 0.4s;
+  outline: none !important;
+  line-height: 1;
+  cursor: pointer;
+  text-align: right;
+}
+
+.mobile-nav-toggle i {
+  color: #fff;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 55px;
+  right: 15px;
+  bottom: 15px;
+  left: 15px;
+  z-index: 9999;
+  overflow-y: auto;
+  background: #fff;
+  transition: ease-in-out 0.2s;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 10px;
+  padding: 10px 0;
+}
+
+.mobile-nav * {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.mobile-nav a {
+  display: block;
+  position: relative;
+  color: #333333;
+  padding: 10px 20px;
+  font-weight: 500;
+  outline: none;
+}
+
+.mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
+  color: #03C4EB;
+  text-decoration: none;
+}
+
+.mobile-nav .drop-down > a:after {
+  content: "\ea99";
+  font-family: IcoFont;
+  padding-left: 10px;
+  position: absolute;
+  right: 15px;
+}
+
+.mobile-nav .active.drop-down > a:after {
+  content: "\eaa1";
+}
+
+.mobile-nav .drop-down > a {
+  padding-right: 35px;
+}
+
+.mobile-nav .drop-down ul {
+  display: none;
+  overflow: hidden;
+}
+
+.mobile-nav .drop-down li {
+  padding-left: 20px;
+}
+
+.mobile-nav-overly {
+  width: 100%;
+  height: 100%;
+  z-index: 9997;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background: rgba(26, 26, 26, 0.6);
+  overflow: hidden;
+  display: none;
+  transition: ease-in-out 0.2s;
+}
+
+.mobile-nav-active {
+  overflow: hidden;
+}
+
+.mobile-nav-active .mobile-nav {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-nav-active .mobile-nav-toggle i {
+  color: #fff;
+}
+
+/*--------------------------------------------------------------
+# Sections (Common)
+--------------------------------------------------------------*/
+.section-title {
+  font-size: 50px;
+  color: #111;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+}
+
+.section-description {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-title-divider {
+  width: 50px;
+  height: 3px;
+  background: #03C4EB;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.candidate-section-description {
+  text-align: center;
+  margin-bottom: 200px;
+}
+
+.judge-id-description {
+  text-align: center;
+  margin-bottom: 75px;
+}
+
+.category-description {
+  text-align: center;
+  margin-bottom: 200px;
+}
+
+#info .info-scores {
+  color: #03C4EB;
+  font-weight: 500;
+  font-size: 45px;
+  text-align: center;
+  margin-top: 50px;
+}
+
+div.chart_div table {
+  width: auto;
+  margin: 0 auto !important;
+}
+
+/*--------------------------------------------------------------
+# Info Section
+--------------------------------------------------------------*/
+#info {
+  background: #fff;
+  padding: 80px 0;
+}
+
+#info .info-img {
+  overflow: hidden;
+
+}
+
+#info .info-img img {
+  max-width: 100%;
+}
+
+@media (max-width: 768px) {
+  #info .info-img {
+    height: auto;
+  }
+  #info .info-img img {
+    margin-left: 0;
+    padding-bottom: 30px;
+  }
+}
+
+.info-description {
+  text-align: center;
+  margin-bottom: 75px;
+}
+
+#info .info-content {
+  background: #fff;
+
+}
+
+#info .info-title {
+  color: black;
+  font-weight: 500;
+  font-size: 50px;
+  text-align: center;
+}
+
+#info .info-text {
+  line-height: 26px;
+  margin-bottom: 15px;
+}
+
+#info .info-text:last-child {
+  margin-bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# Divider Section
+--------------------------------------------------------------*/
+#divider {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/aerial.jpg) fixed center center;
+  background-size: cover;
+  padding: 80px 0;
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  background: #111;
+  padding: 30px 0;
+  color: #fff;
+}
+
+#footer .copyright {
+  text-align: center;
+  color: white;
+  font-size: 15px;
+}
+
+/*--------------------------------------------------------------
+# Candidate Dashboard Page
+--------------------------------------------------------------*/
+
+
+/* Remarks Section
+--------------------------------*/
+#remarks {
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/music.svg") fixed center center;
+  background-size: contain;
+  padding: 80px 0 60px 0;
+}
+
+#remarks .remarks-item {
+  margin-bottom: 20px;
+}
+
+#remarks .remarks-icon {
+  float: left;
+  background: #03C4EB;
+  padding: 16px;
+  border-radius: 50%;
+  transition: 0.5s;
+  border: 1px solid #03C4EB;
+}
+
+#remarks .remarks-icon i {
+  color: #fff;
+  font-size: 24px;
+}
+
+#remarks .remarks-item:hover .service-icon {
+  background: #fff;
+}
+
+#remarks .remarks-item:hover .service-icon i {
+  color: #03C4EB;
+}
+
+#remarks .remarks-title {
+  margin-left: 80px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+#remarks .remarks-title a {
+  color: #111;
+}
+
+#remarks .remarks-description {
+  margin-left: 80px;
+  line-height: 24px;
+}
+
+/* Candidate (Scores) Graph Section
+--------------------------------*/
+#graph {
+  background: #fff;
+  padding: 80px 0;
+}
+
+/*--------------------------------------------------------------
+# Judge Dashboard Page
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Judge Music Section
+--------------------------------------------------------------*/
+#music-section{
+  margin-top: 50px;
+}
+
+#music-div {
+  margin-top: 50px;
+  margin-bottom: 100px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+}
+
+#carouselExampleIndicators .carousel-indicators {
+  color: red;
+  background-color: blue;
+}
+
+#carouselExampleIndicators .carousel-item {
+  margin-bottom: 100px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+#carouselExampleIndicators .carousel-control-next-icon {
+  color: green;
+  background-color: cyan;
+}
+
+#carouselExampleIndicators .carousel-control-prev-icon {
+  font-size: 500px;
+  color: green;
+  background-color: purple;
+}
+
+#carouselExampleIndicators {
+  color: black;
+  background-color: red;
+}
+
+/*--------------------------------------------------------------
+/* Judge Score Section
+--------------------------------*/
+#judge-score {
+  background: #fff;
+  padding: 80px 0;
+}
+
+/*--------------------------------------------------------------
+# Judge Score Section Sliders
+--------------------------------------------------------------*/
+
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+.slider::-webkit-slider-thumb {
+  /* -webkit-appearance: none; */
+  /* appearance: none; */
+  background: url("/public/assets/img/note.png");
+  width: 23px;
+  height: 24px;
+  border: 0;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  background: url("/public/assets/img/note.png");
+  width: 23px;
+  height: 24px;
+  border: 0;
+  cursor: pointer;
+}
+
+/*--------------------------------------------------------------
+/* Judge Remarks Section
+--------------------------------*/
+#judge-remarks {
+  background: #f6f6f6;
+  padding: 80px 0;
+}
+
+#judge-remarks .profile {
+  text-align: center;
+}
+
+#judge-remarks .profile .pic {
+  border-radius: 50%;
+  border: 6px solid #fff;
+  margin-bottom: 15px;
+  overflow: hidden;
+  height: 150px;
+  width: 150px;
+}
+
+#judge-remarks .profile .pic img {
+  max-width: 100%;
+}
+
+#judge-remarks .profile h4 {
+  font-weight: 700;
+  color: #03C4EB;
+  margin-bottom: 5px;
+}
+
+#judge-remarks .profile span {
+  color: #333333;
+}
+
+#judge-remarks .quote {
+  position: relative;
+  background: #fff;
+  padding: 60px;
+  margin-top: 40px;
+  font-size: 16px;
+  font-style: italic;
+  border-radius: 5px;
+}
+
+#judge-remarks .quote b {
+  display: inline-block;
+  font-size: 22px;
+  left: -9px;
+  position: relative;
+  top: -8px;
+}
+
+#judge-remarks .quote small {
+  display: inline-block;
+  right: -9px;
+  position: relative;
+  top: 4px;
+}
+
+/*--------------------------------------------------------------
+/* Voting Section
+--------------------------------*/
+#vote {
+  background: #fff;
+  padding: 80px 0;
+}
+
+#vote .profile {
+  text-align: center;
+}
+
+#vote .profile .pic {
+  border-radius: 50%;
+  border: 6px solid #f6f6f6;
+  margin-bottom: 15px;
+  overflow: hidden;
+  height: 150px;
+  width: 150px;
+}
+
+#vote .profile .pic img {
+  max-width: 100%;
+}
+
+#vote .profile h4 {
+  font-weight: 700;
+  color: #03C4EB;
+  margin-bottom: 5px;
+}
+
+#vote .profile span {
+  color: #333333;
+}
+
+#vote .quote {
+  position: relative;
+  background: #fff;
+  padding: 60px;
+  margin-top: 40px;
+  font-size: 16px;
+  font-style: italic;
+  border-radius: 5px;
+}
+
+#vote .quote b {
+  display: inline-block;
+  font-size: 22px;
+  left: -9px;
+  position: relative;
+  top: -8px;
+}
+
+#vote .quote small {
+  display: inline-block;
+  right: -9px;
+  position: relative;
+  top: 4px;
+}
+
+#vote .btn {
+  margin: 50px 50px 65px 50px;
+}
+
+#vote .btn-yes {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+#vote .btn-yes:hover, .btn-yes:active, .btn-yes:focus {
+  background: #03C4EB;
+  border: 2px solid #03C4EB;
+}
+
+#vote .btn-no {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+#vote .btn-no:hover, .btn-no:active, .btn-no:focus {
+  background: #03C4EB;
+  border: 2px solid #03C4EB;
+}
+
+#vote .btn-submit {
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+#vote .btn-submit:hover {
+  background: white;
+  border: 2px solid darkgrey;
+}
+
+.judgevote {
+  -ms-transform: scale(2); /* IE 9 */
+  -webkit-transform: scale(2); /* Chrome, Safari, Opera */
+  transform: scale(2);
+  margin-left: 50px !important;
+  margin-right: 30px !important;
+  }
+
+  .judgebutton {
+    font-size: 24px;
+  }
+
+  .judge-form-group {
+    color: #03C4EB;
+    margin-top: 75px;
+  }
+
+
+  /* Register Section
+--------------------------------*/
+
+#register {
+  background: #fff;
+  padding: 80px 0;
+}
+
+.about-section-description {
+  text-align: center;
+  margin-bottom: 75px;
+}
+
+#register .register-content {
+  background: #fff;
+  margin-bottom: 50px;
+}
+
+#register .register-title {
+  color: #333;
+  font-weight: 700;
+  font-size: 30px;
+}
+
+#register .register-text {
+  line-height: 26px;
+  margin-bottom: 15px;
+}
+
+#register .register-text:last-child {
+  margin-bottom: 0;
+}
+
+#contact_form {
+  padding-top: 35px;
+  padding-bottom: 20px;
+}
