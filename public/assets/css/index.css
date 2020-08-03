@@ -193,14 +193,14 @@ WELCOME MAIN (common)
 /*--------------------------------------------------------------
 # NavBar
 --------------------------------------------------------------*/
-#navigation {
+#header {
   background: #0d0d0d;
   transition: all 0.5s;
   z-index: 997;
   padding: 15px 0;
 }
 
-#navigation .logo {
+#header .logo {
   font-size: 32px;
   margin: 0;
   padding: 0;
@@ -210,21 +210,21 @@ WELCOME MAIN (common)
   text-transform: uppercase;
 }
 
-#navigation .logo a {
+#header .logo a {
   color: #fff;
 }
 
-#navigation .logo img {
+#header .logo img {
   height: 50px;
 }
 
 @media (max-width: 992px) {
-  #navigation .logo {
+  #header .logo {
     font-size: 28px;
   }
 }
 
-.is-sticky #navigation {
+.is-sticky #header {
   background: rgba(0, 0, 0, 0.85);
 }
 
@@ -481,7 +481,8 @@ WELCOME MAIN (common)
 
 .category-description {
   text-align: center;
-  margin-bottom: 200px;
+  margin-bottom: 25px;
+  color: #03C4EB;
 }
 
 #info .info-scores {
@@ -656,8 +657,7 @@ div.chart_div table {
 }
 
 #carouselExampleIndicators .carousel-indicators {
-  color: red;
-  background-color: blue;
+  background-color: black;
 }
 
 #carouselExampleIndicators .carousel-item {
@@ -667,19 +667,15 @@ div.chart_div table {
 }
 
 #carouselExampleIndicators .carousel-control-next-icon {
-  color: green;
-  background-color: cyan;
+  background-color: black;
 }
 
 #carouselExampleIndicators .carousel-control-prev-icon {
-  font-size: 500px;
-  color: green;
-  background-color: purple;
+  background-color: black;
 }
 
 #carouselExampleIndicators {
   color: black;
-  background-color: red;
 }
 
 /*--------------------------------------------------------------
