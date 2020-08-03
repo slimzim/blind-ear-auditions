@@ -38,41 +38,90 @@
   });
 
   var signupForm = document.querySelector("#signup-form");
+  var judgeSignupForm = document.querySelector("#judge-reg");
+  var candidateSignupForm = $("#candidate-reg");
 
-  signupForm.addEventListener("submit", (e) => {
+  $(judgeSignupForm).on("submit", (e) => {
     e.preventDefault();
-
-    var email = signupForm["txt-email"].value;
-    var password = signupForm["txt-pass"].value;
+    var email = judgeSignupForm["email"].value;
+    var password = judgeSignupForm["user_password"].value;
 
     auth.createUserWithEmailAndPassword(email, password).then((cred) => {
-      console.log(cred.user);
-      signupForm.reset();
+      if (cred) {
+        judgeSignupForm.reset();
+        window.location.pathname = "/judge";
+      }
     });
-
-    //   data
-    //     .collection("candidates")
-    //     .add({
-    //       firstName: signupForm["first-name"].value,
-    //       lastName: signupForm["last-name"].value,
-    //       instrument: signupForm["instrument"].value,
-    //       userNum: signupForm["user-num"].value,
-    //       contactNum: signupForm["contact-num"].value,
-    //     })
-    //     .then(() => {
-    //       console.log("info added to firebase");
-    //     });
   });
 
-  var loginForm = document.querySelector("#login-form");
-  loginForm.addEventListener("submit", (e) => {
+  $(candidateSignupForm).on("click", (e) => {
     e.preventDefault();
-    var email = loginForm["login-email"].value;
-    var password = loginForm["login-password"].value;
+    var email = $("#email").val();
+    var password = $("#user_password").val();
+
+    auth.createUserWithEmailAndPassword(email, password).then((cred) => {
+      if (cred) {
+        window.location.pathname = "/comments-form";
+      }
+    });
+  });
+
+  // signupForm.addEventListener("submit", (e) => {
+  //   e.preventDefault();
+
+  //   var email = signupForm["txt-email"].value;
+  //   var password = signupForm["txt-pass"].value;
+
+  //   auth.createUserWithEmailAndPassword(email, password).then((cred) => {
+  //     console.log(cred.user);
+  //     signupForm.reset();
+  //   });
+
+  //   data
+  //     .collection("candidates")
+  //     .add({
+  //       firstName: signupForm["first-name"].value,
+  //       lastName: signupForm["last-name"].value,
+  //       instrument: signupForm["instrument"].value,
+  //       userNum: signupForm["user-num"].value,
+  //       contactNum: signupForm["contact-num"].value,
+  //     })
+  //     .then(() => {
+  //       console.log("info added to firebase");
+  //     });
+  // });
+
+  var judgeLoginForm = document.querySelector("#judge-login-form");
+  $(judgeLoginForm).on("submit", (e) => {
+    e.preventDefault();
+    var email = judgeLoginForm["login-email"].value;
+    var password = judgeLoginForm["login-password"].value;
 
     auth.signInWithEmailAndPassword(email, password).then((cred) => {
-      console.log("User logged in: ", cred.user);
-      loginForm.reset();
+      if (cred) {
+        judgeLoginForm.reset();
+        window.location.pathname = "/judge";
+      }
     });
+  });
+
+  var candidateLoginForm = document.querySelector("#candidate-login-form");
+  $(candidateLoginForm).on("submit", (e) => {
+    e.preventDefault();
+    var email = candidateLoginForm["login-email"].value;
+    var password = candidateLoginForm["login-password"].value;
+
+    auth.signInWithEmailAndPassword(email, password).then((cred) => {
+      if (cred) {
+        candidateLoginForm.reset();
+        window.location.pathname = "/comments-form";
+      }
+    });
+  });
+
+  $("#sign-out").on("click", (e) => {
+    e.preventDefault();
+    auth.signOut();
+    window.location.pathname = "/";
   });
 })();

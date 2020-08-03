@@ -1,238 +1,274 @@
 <!-- ======= Hero Section ======= -->
-  <section id="hero">
-    <div class="hero-container">
-      <div class="wow fadeIn">
-        <div class="hero-logo">
-          <img class="" src="assets/img/logo1.png" alt="Imperial">
-        </div>
-
-        <br>
-        
-        <h2>We are <span class="typed" data-typed-items="the conductors of change., orchestrating diversity., uniting symphonies."></span></h2>
+<section id="hero">
+  <div class="hero-container">
+    <div class="wow fadeIn">
+      <div class="hero-logo">
+        <img class="" src="assets/img/logo1.png" alt="Imperial">
       </div>
+
+      <br>
+
+      <h2>We are <span class="typed"
+          data-typed-items="the conductors of change., orchestrating diversity., uniting symphonies."></span></h2>
     </div>
-  </section><!-- End Hero -->
+  </div>
+</section><!-- End Hero -->
 
-  <!-- ======= Header ======= -->
-  <header id="header">
-    <div class="container d-flex align-items-center">
+<!-- ======= Header ======= -->
+<header id="header">
+  <div class="container d-flex align-items-center">
 
-      <a href="index.html" class="logo mr-auto"><img src="assets/img/logo2.png" alt=""></a>
+    <a href="index.html" class="logo mr-auto"><img src="assets/img/logo2.png" alt=""></a>
 
-      <nav class="nav-menu d-none d-lg-block">
-        <ul>
-          <li class="active"><a href="#register">| Register |</a></li>
-          <li><a href="index.html">| Home |</a></li>
-        </ul>
-      
+    <nav class="nav-menu d-none d-lg-block">
+      <ul>
+        <li class="active"><a href="#register">| Register |</a></li>
+        <li><a href="index.html">| Home |</a></li>
+      </ul>
 
-      </nav> <!-- .nav-menu -->
+
+    </nav> <!-- .nav-menu -->
+
+  </div>
+</header><!-- End Header -->
+
+<div id="login-modal" class="modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">If you have an account please login. If not, please register.</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="candidate-login-form">
+          <div class="form-group">
+            <label for="login-password">Email address</label>
+            <input type="email" class="form-control" id="login-email" aria-describedby="emailHelp">
+
+          </div>
+          <div class="form-group">
+            <label for="login-password">Password</label>
+            <input type="password" class="form-control" id="login-password">
+          </div>
+
+          <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+      </div>
 
     </div>
-  </header><!-- End Header -->
+  </div>
+</div>
 
 <section id="register">
-    <div class="container wow fadeInUp">
-        <div class="row">
-            <div class="col-md-12">
-                <h1 class="section-title">Candidate Registration</h1>
-                    <div class="section-title-divider"></div>
-                        <div class="container align-content-center">
+  <div class="container wow fadeInUp">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="section-title">Candidate Registration</h1>
+        <div class="section-title-divider"></div>
+        <div class="container align-content-center">
 
-                        <form class="well form-horizontal" action="" method="post" id="contact_form">
-                            <fieldset>
+          <form id="candidate-reg" class=" well form-horizontal" action="" method="post" id="contact_form">
+            <fieldset>
 
-                                <!-- Text input-->
+              <!-- Text input-->
 
-                                <div class="form-group">
-                                <label class="col-md-4 control-label">First Name</label>  
-                                <div class="col-md-4 inputGroupContainer">
-                                <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input name="first_name" placeholder="First Name" id="first-name" class="form-control"  type="text">
-                                    </div>
-                                </div>
-                                </div>
+              <div class="form-group">
+                <label class="col-md-4 control-label">First Name</label>
+                <div class="col-md-4 inputGroupContainer">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input name="first_name" placeholder="First Name" id="first-name" class="form-control" type="text">
+                  </div>
+                </div>
+              </div>
 
-                                <!-- Text input-->
+              <!-- Text input-->
 
-                                <div class="form-group">
-                                <label class="col-md-4 control-label" >Last Name</label> 
-                                    <div class="col-md-4 inputGroupContainer">
-                                    <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input name="last_name" placeholder="Last Name" id="last-name" class="form-control" type="text">
-                                    </div>
-                                </div>
-                                </div>
+              <div class="form-group">
+                <label class="col-md-4 control-label">Last Name</label>
+                <div class="col-md-4 inputGroupContainer">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input name="last_name" placeholder="Last Name" id="last-name" class="form-control" type="text">
+                  </div>
+                </div>
+              </div>
 
-                                <div class="form-group"> 
-                                <label class="col-md-4 control-label">Section/Instrument</label>
-                                    <div class="col-md-4 selectContainer">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                                    <select id="instrument" name="department" class="form-control selectpicker">
-                                    <option value="">Select your Instrument</option>
-                                    <optgroup label="Brass">
-                                        <option>Bass Trombone</option>
-                                        <option>French Horn</option>
-                                        <option>Trombone</option>
-                                        <option>Trumpet</option>
-                                        <option>Tuba</option>
-                                    </optgroup>
-                                    <optgroup label="Percussion">
-                                        <option>Percussion</option>
-                                        <option>Timpani</option>
-                                    </optgroup> 
-                                    <optgroup label="Strings">
-                                    <option>Double Bass</option>
-                                    <option>Cello</option>
-                                    <option>Harp</option>
-                                    <option>Viola</option>
-                                    <option>Violin</option>
-                                    </optgroup>
-                                    <optgroup label="Woodwinds">
-                                    <option>Bass Clarinet</option>
-                                    <option>Bassoon</option>
-                                    <option>Clarinet</option>
-                                    <option>Contrabassoon</option>
-                                    <option>English Horn</option>
-                                    <option>Flute</option>
-                                    <option>Oboe</option>
-                                    <option>Piccolo</option>
-                                    </optgroup>
-                                    </select>
-                                </div>
-                                </div>
-                                </div>
+              <div class="form-group">
+                <label class="col-md-4 control-label">Section/Instrument</label>
+                <div class="col-md-4 selectContainer">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                    <select id="instrument" name="department" class="form-control selectpicker">
+                      <option value="">Select your Instrument</option>
+                      <optgroup label="Brass">
+                        <option>Bass Trombone</option>
+                        <option>French Horn</option>
+                        <option>Trombone</option>
+                        <option>Trumpet</option>
+                        <option>Tuba</option>
+                      </optgroup>
+                      <optgroup label="Percussion">
+                        <option>Percussion</option>
+                        <option>Timpani</option>
+                      </optgroup>
+                      <optgroup label="Strings">
+                        <option>Double Bass</option>
+                        <option>Cello</option>
+                        <option>Harp</option>
+                        <option>Viola</option>
+                        <option>Violin</option>
+                      </optgroup>
+                      <optgroup label="Woodwinds">
+                        <option>Bass Clarinet</option>
+                        <option>Bassoon</option>
+                        <option>Clarinet</option>
+                        <option>Contrabassoon</option>
+                        <option>English Horn</option>
+                        <option>Flute</option>
+                        <option>Oboe</option>
+                        <option>Piccolo</option>
+                      </optgroup>
+                    </select>
+                  </div>
+                </div>
+              </div>
 
-                                <!-- Text input-->
-                                    <div class="form-group">
-                                <label class="col-md-4 control-label">E-Mail</label>  
-                                    <div class="col-md-4 inputGroupContainer">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                <input name="email" id="email" placeholder="E-Mail Address" class="form-control"  type="text">
-                                    </div>
-                                </div>
-                                </div>
+              <!-- Text input-->
+              <div class="form-group">
+                <label class="col-md-4 control-label">E-Mail</label>
+                <div class="col-md-4 inputGroupContainer">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                    <input name="email" id="email" placeholder="E-Mail Address" class="form-control" type="text">
+                  </div>
+                </div>
+              </div>
 
 
-                                <!-- Text input-->
+              <!-- Text input-->
 
-                                <div class="form-group">
-                                <label class="col-md-4 control-label" >Password</label> 
-                                    <div class="col-md-4 inputGroupContainer">
-                                    <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input name="user_password" id="user_password" placeholder="Password" class="form-control"  type="password">
-                                    </div>
-                                </div>
-                                </div>
+              <div class="form-group">
+                <label class="col-md-4 control-label">Password</label>
+                <div class="col-md-4 inputGroupContainer">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input name="user_password" id="user_password" placeholder="Password" class="form-control"
+                      type="password">
+                  </div>
+                </div>
+              </div>
 
-                                <!-- Text input-->
+              <!-- Text input-->
 
-                                <div class="form-group">
-                                <label class="col-md-4 control-label" >Confirm Password</label> 
-                                    <div class="col-md-4 inputGroupContainer">
-                                    <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input name="confirm_password" id="confirm_password" placeholder="Confirm Password" class="form-control"  type="password">
-                                    </div>
-                                </div>
-                                </div>
+              <div class="form-group">
+                <label class="col-md-4 control-label">Confirm Password</label>
+                <div class="col-md-4 inputGroupContainer">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input name="confirm_password" id="confirm_password" placeholder="Confirm Password"
+                      class="form-control" type="password">
+                  </div>
+                </div>
+              </div>
 
-                                <!-- Text input-->
-                                    
-                                <div class="form-group">
-                                <label class="col-md-4 control-label">Contact Number</label>  
-                                    <div class="col-md-4 inputGroupContainer">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-                                <input name="phone" id="phone" placeholder="(000) 000-0000" class="form-control" type="text">
-                                    </div>
-                                </div>
-                                </div>
+              <!-- Text input-->
 
-                                <!-- Select Basic -->
+              <div class="form-group">
+                <label class="col-md-4 control-label">Contact Number</label>
+                <div class="col-md-4 inputGroupContainer">
+                  <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                    <input name="phone" id="phone" placeholder="(000) 000-0000" class="form-control" type="text">
+                  </div>
+                </div>
+              </div>
 
-                                <!-- Success message 
+              <!-- Select Basic -->
+
+              <!-- Success message 
                                 <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i></div> 
                                 -->
 
-                                <!-- Button -->
-                                <div class="form-group">
-                                <label class="col-md-4 control-label"></label>
-                                <div class="col-md-4"><br>
-                                    <button type="submit" id="submit" class="btn btn-dark btn-block" >SUBMIT <span class="glyphicon glyphicon-send"></span></button>
-                                </div>
-                                </div>
+              <!-- Button -->
+              <div class="form-group">
+                <label class="col-md-4 control-label"></label>
+                <div class="col-md-4"><br>
+                  <button type="submit" id="submit" class="btn btn-dark btn-block">SUBMIT <span
+                      class="glyphicon glyphicon-send"></span></button>
+                </div>
+              </div>
 
-                            </fieldset>
-                        </form>
-                    </div> <!-- end form div -->
-                </div> <!-- end section-title div -->
-            </div> <!-- end col div -->
-        </div> <!-- end row div -->
-    </div> <!-- end main container div -->
-    </section> <!-- end section -->
+            </fieldset>
+          </form>
+        </div> <!-- end form div -->
+      </div> <!-- end section-title div -->
+    </div> <!-- end col div -->
+  </div> <!-- end row div -->
+  </div> <!-- end main container div -->
+</section> <!-- end section -->
 
 <!-- ======= Subscribe Section ======= -->
-    <section id="subscribe">
-      <div class="container wow fadeInUp">
-        <div class="row">
-          <div class="col-md-8">
-            <h3 class="subscribe-title"></h3>
-            <p class="subscribe-text"></p>
-          </div>
-          <!-- <div class="col-md-4 subscribe-btn-container">
+<section id="subscribe">
+  <div class="container wow fadeInUp">
+    <div class="row">
+      <div class="col-md-8">
+        <h3 class="subscribe-title"></h3>
+        <p class="subscribe-text"></p>
+      </div>
+      <!-- <div class="col-md-4 subscribe-btn-container">
             <a class="subscribe-btn" href="#">Subscribe Now</a>
           </div> -->
-        </div> 
-      </div>
-    </section><!-- End Subscribe Section -->
+    </div>
+  </div>
+</section><!-- End Subscribe Section -->
 
 
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
-    <div class="container">
+<!-- ======= Footer ======= -->
+<footer id="footer">
+  <div class="container">
     <div class="row">
-        <div class="col-md-12">
+      <div class="col-md-12">
         <div class="copyright">
-            &copy; O.G Group &hearts;
+          &copy; O.G Group &hearts;
         </div>
         <div class="credits">
         </div>
-        </div>
+      </div>
     </div>
-    </div>
-    </footer><!-- End Footer -->
+  </div>
+</footer><!-- End Footer -->
 
-    <div id="preloader"></div>
-    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+<div id="preloader"></div>
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
-    <!-- jQuery 3.3.1 -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        
-    <!--Bootstrap JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>    
+<!-- jQuery 3.3.1 -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/jquery/jquery.min.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
-    <script src="assets/vendor/venobox/venobox.min.js"></script>
-    <script src="assets/vendor/typed.js/typed.min.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
+<!--Bootstrap JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+  integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 
-    <!--  Main JS Files -->
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/register.js"></script>
-    <script src="js/candidateregister.js"></script>
+<!-- Vendor JS Files -->
+<script src="assets/vendor/jquery/jquery.min.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+<script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+<script src="assets/vendor/venobox/venobox.min.js"></script>
+<script src="assets/vendor/typed.js/typed.min.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!--  Main JS Files -->
+<script src="assets/js/main.js"></script>
+<script src="assets/js/register.js"></script>
+<script src="js/candidateregister.js"></script>
+<script src="assets/js/auth.js"></script>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
