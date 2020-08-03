@@ -31,9 +31,9 @@ module.exports = function(app) {
   })
 
   // Load comments card page using candidate number
-  app.get("/comments/:id", function(req, res) {
+  app.get("/candidate/:id", function(req, res) {
     db.Score.findAll({ where: { candidate_number: req.params.id } }).then(function(dbComments) {
-      res.render("comments", {
+      res.render("candidate", {
         comments: dbComments,
         empty: req.params.id
       });
