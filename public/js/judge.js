@@ -81,9 +81,9 @@ $submitBtn.on("click", handleFormSubmit)
   var musicalitySlider = document.getElementById("musicality");
   var musicalityoutput = document.getElementById("musicality-slider");
   musicalityoutput.innerHTML = musicalitySlider.value;
-  
+    
   musicalitySlider.oninput = function() {
-    musicalityoutput.innerHTML = this.value;
+  musicalityoutput.innerHTML = this.value;
   }
 
 

@@ -1,6 +1,5 @@
 var $firstname = $("#first-name");
 var $lastname = $("#last-name");
-var $instrument = $("#instrument");
 var $email = $("#email");
 var $password = $("#user_password");
 var $confirmPassword = $("#confirm_password");
@@ -25,7 +24,6 @@ var handleFormSubmit = function() {
   var newJudge = {
     first_name: $firstname.val(),
     last_name: $lastname.val(),
-    instrument: $instrument.val(),
     email: $email.val().trim(),
     password: $password.val().trim(),
     phone: $phone.val().trim(),
@@ -39,11 +37,6 @@ var handleFormSubmit = function() {
 
   if (!$lastname.val()) {
     alert("Please enter your last name!");
-    return;
-  }
-
-  if (!$instrument.val()) {
-    alert("Please select your instrument!");
     return;
   }
 
@@ -80,7 +73,17 @@ var handleFormSubmit = function() {
       " " +
       newJudge.last_name +
       "!"
-  );
+    );
+
+    window.location.pathname = "/judge";  
+
 };
+
+
+
+$submitBtn.on("click", function(event){
+  event.preventDefault();
+  handleFormSubmit();
+});
 
 $("#login-modal").modal();
