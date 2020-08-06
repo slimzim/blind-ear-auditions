@@ -34,7 +34,7 @@
       getWidthFrom: '',
       widthFromWrapper: true, // works only when .getWidthFrom is empty
       responsiveWidth: false,
-      zIndex: 'auto'
+      zIndex: 'inherit'
     },
     $window = $(window),
     $document = $(document),
@@ -79,7 +79,8 @@
           if (s.currentTop !== newTop) {
             var newWidth;
             if (s.getWidthFrom) {
-                newWidth = $(s.getWidthFrom).width() || null;
+                padding =  s.stickyElement.innerWidth() - s.stickyElement.width();
+                newWidth = $(s.getWidthFrom).width() - padding || null;
             } else if (s.widthFromWrapper) {
                 newWidth = s.stickyWrapper.width();
             }
@@ -152,8 +153,8 @@
     },
     methods = {
       init: function(options) {
-        var o = $.extend({}, defaults, options);
         return this.each(function() {
+          var o = $.extend({}, defaults, options);
           var stickyElement = $(this);
 
           var stickyId = stickyElement.attr('id');
@@ -162,7 +163,11 @@
             .attr('id', wrapperId)
             .addClass(o.wrapperClassName);
 
-          stickyElement.wrapAll(wrapper);
+          stickyElement.wrapAll(function() {
+            if ($(this).parent("#" + wrapperId).length == 0) {
+                    return wrapper;
+            }
+});
 
           var stickyWrapper = stickyElement.parent();
 
@@ -202,12 +207,21 @@
           });
           mutationObserver.observe(stickyElement, {subtree: true, childList: true});
         } else {
-          stickyElement.addEventListener('DOMNodeInserted', function() {
-            methods.setWrapperHeight(stickyElement);
-          }, false);
-          stickyElement.addEventListener('DOMNodeRemoved', function() {
-            methods.setWrapperHeight(stickyElement);
-          }, false);
+          if (window.addEventListener) {
+            stickyElement.addEventListener('DOMNodeInserted', function() {
+              methods.setWrapperHeight(stickyElement);
+            }, false);
+            stickyElement.addEventListener('DOMNodeRemoved', function() {
+              methods.setWrapperHeight(stickyElement);
+            }, false);
+          } else if (window.attachEvent) {
+            stickyElement.attachEvent('onDOMNodeInserted', function() {
+              methods.setWrapperHeight(stickyElement);
+            });
+            stickyElement.attachEvent('onDOMNodeRemoved', function() {
+              methods.setWrapperHeight(stickyElement);
+            });
+          }
         }
       },
       update: scroller,
