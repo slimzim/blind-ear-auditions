@@ -1,4 +1,4 @@
-# Group Project #2
+# Blind Ear Auditions
 
 * [Blind Ear Auditions](https://hidden-bayou-00544.herokuapp.com/)
 
