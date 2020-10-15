@@ -1,4 +1,4 @@
-<img src="readme-header.png" align="center"
+<img src="/public/assets/img/readme-header.png" align="center"
      alt="Blind Ear Auditions" width="100%" height="auto">
 
 
@@ -17,11 +17,7 @@
  > Blind Ear Auditions is an application designed to help symphony orchestras streamline the audition process.  Judges upload their scores and comments to a database through an elegant UI, and audition candidates retrieve their comments after the audition.   I was a symphony musician for 13 years, and I always dreamed an application like this - it's been fun to get the idea off the ground!
 ---
 
-## Technologies
-> <b>Design Tools:</b>
-  * Adobe Illustrator
-  * Adobe Photoshop
-  
+## Technologies 
 > <b>Development Tools:</b>
   * Handlebars
   * AJAX
