@@ -1,13 +1,70 @@
-# Blind Ear Auditions
-
-* [Blind Ear Auditions](https://hidden-bayou-00544.herokuapp.com/)
-
-Prior to the COVID-19 pandemic, I was a musician in the Nashville Symphony. Having spent countless hours preparing for auditions as a student and listening to auditions as an adjudicator, I always dreamt of an electronic system for taking notes and tallying votes.
-
-Blind Ear Auditions is exactly that: An application for adjudicators to keep track of their comments, store them in a database, and make them available to candidates after the process concludes, allowing the candidates to study their feedback and use the process as a learning experience.
-
-Additionally, by collecting demographic data on judges and candidates, Blind Ear will help orchestras assess where individual and institutional biases exist - if they exist at all. Musicians trade in emotions as part of their work, and aspiring musicians from underrepresented demographics often say they feel that the audition process itself is rigged against them. We intend to investigate the truthfulness of that assessment using this application.
-
-What we are pesenting now barely scratches the surface of the concept. We hope to finish the application over the course of the next year, partner with a data analytics firm, and bring orchestras around the country on board for testing once the industry resumes. With any luck, the industry will realize that a data-minded approach will help orchestras modernize the hiring process and ensure that the cream of the applicant pool rises to the top.
+<img src="readme-header.png" align="center"
+     alt="Blind Ear Auditions" width="100%" height="auto">
 
 
+---
+
+## Table of Contents
+  * [Summary](#Summary)
+  * [Technologies](#technologies)
+  * [Features And Functionality](#features-and-functionality)
+  * [Challenges](#challenges)
+  * [Future Development](#future-development)
+  * [Click here to visit the site!](https://blind-ear-auditions.herokuapp.com/)
+---
+
+## Summary 
+ > Blind Ear Auditions is an application designed to help symphony orchestras streamline the audition process.  Judges upload their scores and comments to a database through an elegant UI, and audition candidates retrieve their comments after the audition.   I was a symphony musician for 13 years, and I always dreamed an application like this - it's been fun to get the idea off the ground!
+---
+
+## Technologies
+> <b>Design Tools:</b>
+  * Adobe Illustrator
+  * Adobe Photoshop
+  
+> <b>Development Tools:</b>
+  * Handlebars
+  * AJAX
+  * Express
+  * Path 
+  * Google Charts
+  * Sequelize
+  * Node 
+  * Git
+  * Heroku
+---
+
+## Features And Functionality
+
+
+  * <b>Judges use elegant interface to score candidates, write comments, and vote on candidates.</b>
+   <img src="Judge.gif" align="center"
+       alt="Judge Interface" width="100%" height="auto">
+
+  * <b>Candidates receive average scores, written comments, and a visual display of scores using Google Charts.</b>
+   <img src="Candidate-Score.gif" align="center"
+       alt="Candidate Score Page" width="100%" height="auto">
+
+  
+
+---
+
+## Challenges
+
+ 1. <b>Handlebars:</b> One of the requirements for this project was to use the Handlebars templating engine, which we found limiting.. 
+
+ 2. <b>Time Constraint:</b> With only a couple of weeks to create the application, what we came up with barely scratches the surface of this application's potential.
+ 
+---
+
+## Future Development 
+
+ 1. <b>React:</b> Now that we've learned React and Bootcamp is over, my teammates and I are working on rebuilding the application using React instead of Handlebars.  
+ 
+ 2. <b>Firebase:</b> One of our team members has acquired tremendous skill with Firebase, and we plan to use Firebase for authentication and a messaging feature that will be well suited to the needs of this application.
+ 
+ 3. <b>Mobile Friendliness:</b> A real-world usage of this application will require a mobile version, and we plan to place more focus on mobile in this next round of development.  
+
+---
+
+[Back To Top](#Table-of-Contents)
