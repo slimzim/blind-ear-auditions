@@ -38,11 +38,11 @@
 
 
   * <b>Judges use elegant interface to score candidates, write comments, and vote on candidates.</b>
-   <img src="Judge.gif" align="center"
+   <img src="/public/assets/img/judge.gif" align="center"
        alt="Judge Interface" width="100%" height="auto">
 
   * <b>Candidates receive average scores, written comments, and a visual display of scores using Google Charts.</b>
-   <img src="Candidate-Score.gif" align="center"
+   <img src="/public/assets/img/candidate-score.gif" align="center"
        alt="Candidate Score Page" width="100%" height="auto">
 
   
